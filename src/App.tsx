@@ -1,24 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Stars from "./components/Stars/Stars"
+import { Parallax } from '@react-spring/parallax';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{height: "100vh", width:"100vw"}}>
+      <Parallax pages={3} style={{ top: "0", left: "0"}}>  
+        <Stars pages={3}/>
+      </Parallax>
     </div>
   );
 }
