@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Stars from "./components/Stars/Stars"
 import { Parallax } from '@react-spring/parallax';

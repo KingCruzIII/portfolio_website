@@ -1,6 +1,8 @@
 import { ParallaxLayer } from '@react-spring/parallax'
+// import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import Icon from '../Common/Icon'
 
-type StarType = {
+export type StarType = {
   opacity: number,
   offset: number,
   size: number,
@@ -10,18 +12,20 @@ type StarType = {
 
 
 const Star = ({opacity, offset, size, speed, spacing}: StarType) => {
+
   return (
       <ParallaxLayer offset={offset} speed={speed}>
         <div style={{display: "flex"}}>
-          <p style={{
-            marginLeft: `${spacing}%`,
-            opacity: opacity,
-            zIndex: "1050",
-            display: "block",
-            transitionProperty: "opacity",
-            transitionDuration: "1s",
-            transitionDelay: ".5s"
-          }}>o</p>
+          <Icon
+            icon="circle"
+            autoSize
+            size={size}
+            className={""}
+            style={{
+              marginLeft: `${spacing}%`,
+              opacity: `${opacity}%`
+            }}
+          />
         </div>
       </ParallaxLayer>
   )
