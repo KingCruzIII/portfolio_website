@@ -1,6 +1,6 @@
-import { ParallaxLayer } from '@react-spring/parallax'
-// import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import Icon from '../Common/Icon'
+import { ParallaxLayer } from "@react-spring/parallax"
+// import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import Icon from "../Common/Icon"
 
 export type StarType = {
   opacity: number,

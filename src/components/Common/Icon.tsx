@@ -1,21 +1,24 @@
-import * as R from 'ramda'
-import { IconName, IconPrefix, library } from "@fortawesome/fontawesome-svg-core";
+import * as R from "ramda";
+import {
+  IconName,
+  IconPrefix,
+  library,
+} from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fas);
 
 export type IconType = {
-  autoSize?: Boolean,
-  size?: "xxl" | "xl" | "lg" | "m" | "s" | number,
-  style?: object,
-  icon: IconName,
-  prefix?: IconPrefix,
-  className?: string,
-}
+  autoSize?: Boolean;
+  size?: "xxl" | "xl" | "lg" | "m" | "s" | number;
+  style?: object;
+  icon: IconName;
+  prefix?: IconPrefix;
+  className?: string;
+};
 
-
-const Icon = (props:IconType) => {
+const Icon = (props: IconType) => {
   const getSize = () => {
     let autoSize = props.autoSize;
     let dimensions;
@@ -45,13 +48,16 @@ const Icon = (props:IconType) => {
   let ops = R.omit(["size", "autoSize"], props);
   let iconSize = getSize();
 
-
-
   const iconStyle = R.mergeRight(ops.style || {}, {
     width: iconSize,
-    height: iconSize
+    height: iconSize,
   });
-  return <FontAwesomeIcon style={iconStyle} icon={[props.prefix || "fas", props.icon]} />;
+  return (
+    <FontAwesomeIcon
+      style={iconStyle}
+      icon={[props.prefix || "fas", props.icon]}
+    />
+  );
   // return <MuiIcon {...ops} className={"fa " + prefix + "-" + props.icon} />;
 };
 
