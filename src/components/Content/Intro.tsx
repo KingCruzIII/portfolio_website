@@ -1,7 +1,5 @@
-import { ParallaxLayer } from "@react-spring/parallax";
 import { Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useTheme } from "@emotion/react";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
@@ -43,7 +41,6 @@ const TitleBar = styled("div")(({ theme }) =>
 );
 
 function Intro() {
-  const theme = useTheme();
   return (
     <StyledWrapper>
       <StyledPaper>
@@ -55,7 +52,7 @@ function Intro() {
             <Typography component="span" variant="h2">
               {"I'm "}
               <Typography color="secondary.main" component="span" variant="h2">
-                Cruz Muniz,
+                Cruz Muniz TEST,
               </Typography>
             </Typography>
             <Typography component="span">
