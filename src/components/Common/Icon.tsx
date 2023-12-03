@@ -6,8 +6,9 @@ import {
 } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 
-library.add(fas);
+library.add(fas, fab);
 
 export type IconType = {
   autoSize?: Boolean;
@@ -19,6 +20,8 @@ export type IconType = {
 };
 
 const Icon = (props: IconType) => {
+  console.log("asdfasdf");
+  console.log(props.className);
   const getSize = () => {
     let autoSize = props.autoSize;
     let dimensions;
@@ -54,6 +57,7 @@ const Icon = (props: IconType) => {
   });
   return (
     <FontAwesomeIcon
+      className={props.className || ""}
       style={iconStyle}
       icon={[props.prefix || "fas", props.icon]}
     />
