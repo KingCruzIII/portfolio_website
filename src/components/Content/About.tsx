@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Icon from "../Common/Icon";
+import Icon from "../Common/Icons/Icon";
 import Avatar from "@mui/material/Avatar";
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
@@ -55,9 +55,11 @@ const About = () => {
           <IconWrapper icon="yarn" prefix="fab" size="lg" />
           <IconWrapper icon="database" prefix="fas" size="lg" />
           <IconWrapper icon="linux" prefix="fab" size="lg" />
-          <Typography fontSize="2rem" variant="body1">
-            Ansible, Google Cloud, ruby, Kubernetes, typescript
-          </Typography>
+          <IconWrapper icon="ansible" size="lg" />
+          <IconWrapper icon="googlecloud" size="lg" />
+          <IconWrapper icon="ruby" size="lg" />
+          <IconWrapper icon="kube" size="lg" />
+          <IconWrapper icon="typescript" size="lg" />
         </div>
       </Info>
     </Wrapper>

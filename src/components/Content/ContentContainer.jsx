@@ -1,25 +1,23 @@
 import { Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Icon from "../Common/Icon";
+import Icon from "../Common/Icons/Icon";
 import About from "./About";
 // import Intro from "./Intro";
 
-const StyledPaper = styled(Paper)(({ theme }) =>
-  theme.unstable_sx({
-    display: "flex",
-    flexDirection: "column",
-    // justifyContent: "space-between",
-    zIndex: "100",
-    margin: "auto",
-    height: "100vh",
-    width: "100vw",
-    maxHeight: "791px",
-    maxWidth: "1280px",
-    padding: "2rem",
-    // background: "linear-gradient(to top, transparent, black)",
-    // backgroundColor: `radial-gradient(${theme.palette.background.paper}, transparent)`,
-  })
-);
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  // justifyContent: "space-between",
+  zIndex: "100",
+  margin: "auto",
+  height: "100vh",
+  width: "100vw",
+  maxHeight: "791px",
+  maxWidth: "1280px",
+  padding: "2rem",
+  // background: "linear-gradient(to top, transparent, black)",
+  // backgroundColor: `radial-gradient(${theme.palette.background.paper}, transparent)`,
+}));
 
 const Content = styled("div")(({ theme }) => ({
   display: "flex",
@@ -36,14 +34,12 @@ const StyledWrapper = styled("div")(({ theme }) => ({
   height: "100vh",
 }));
 
-const Links = styled("div")(({ theme }) =>
-  theme.unstable_sx({
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    flexShrink: "1",
-  })
-);
+const Links = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  flexShrink: "1",
+}));
 
 const IconWrapper = styled(Icon)(({ theme }) => ({
   // margin: "1rem",
@@ -64,9 +60,9 @@ const ContentContainer = () => {
       <StyledPaper>
         <Content elevation={2}>
           {/* <div>
-            <IconWrapper icon="github" prefix="fab" size="lg" />
-            <IconWrapper icon="linkedin" prefix="fab" size="lg" />
-            <IconWrapper icon="git-alt" prefix="fab" size="lg" />
+            <IconWrapper icon="github" prefix="fab" size="s" />
+            <IconWrapper icon="linkedin" prefix="fab" size="s" />
+            <IconWrapper icon="git-alt" prefix="fab" size="s" />
           </div> */}
           {/* <Intro /> */}
           <About />
