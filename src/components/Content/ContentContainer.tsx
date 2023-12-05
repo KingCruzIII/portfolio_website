@@ -72,6 +72,8 @@ const Intro = styled("div")(() => ({
   flexGrow: "1",
 }));
 
+const IconLink = styled("a")(() => ({}));
+
 const ContentContainer = () => {
   return (
     <StyledWrapper>
@@ -107,9 +109,21 @@ const ContentContainer = () => {
         </Content>
         <Links>
           <Nav>
-            <IconButton as={SiLinkedin} />
-            <IconButton as={SiGithub} />
-            <IconButton as={FaEnvelope} />
+            <IconLink
+              target="_blank"
+              href="https://www.linkedin.com/in/cruz-muniz-iii"
+            >
+              <IconButton as={SiLinkedin} />
+            </IconLink>
+            <IconLink target="_blank" href="https://github.com/KingCruzIII">
+              <IconButton as={SiGithub} />
+            </IconLink>
+            {/* <IconLink
+              target="_blank"
+              // href="https://www.linkedin.com/in/cruz-muniz-iii"
+            >
+              <IconButton as={FaEnvelope} />
+            </IconLink> */}
           </Nav>
         </Links>
       </StyledPaper>
