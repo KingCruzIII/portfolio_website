@@ -14,7 +14,6 @@ const StyledPaper = styled("div")(() => ({
 
 const Content = styled("div")(() => ({
   display: "flex",
-
   flexGrow: "1",
 }));
 
@@ -77,7 +76,7 @@ const ContentContainer = () => {
   return (
     <StyledWrapper>
       <StyledPaper>
-        <Content elevation={2}>
+        <Content>
           <AvatarWrapper>
             <StyledAvatar src="https://avatars.githubusercontent.com/kingcruziii" />
             <Button variant="contained">
