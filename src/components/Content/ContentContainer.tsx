@@ -17,9 +17,12 @@ const StyledWrapper = styled("div")(() => ({
   height: "100vh",
 }));
 
-const Content = styled("div")(() => ({
+const Content = styled("div")(({ theme }) => ({
   display: "flex",
   flexGrow: "1",
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column-reverse",
+  },
 }));
 
 const Links = styled("div")(() => ({
@@ -61,12 +64,16 @@ const AvatarWrapper = styled("div")(() => ({
   alignItems: "center",
 }));
 
-const Intro = styled("div")(() => ({
+const Intro = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   flexGrow: "1",
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: "1rem",
+    textAlign: "center",
+  },
 }));
 
 const IconLink = styled("a")(() => ({
@@ -111,7 +118,7 @@ const ContentContainer = () => {
               <Typography component="span" color="primary.main">
                 {"Fullstack Developer "}
                 <Typography component="span" color="text.primary">
-                  {"who has a passion for "}
+                  {"who enjoys "}
                   <Typography component="span" color="primary.main">
                     {"Frontend Development"}
                   </Typography>
