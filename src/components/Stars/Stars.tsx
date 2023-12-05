@@ -1,17 +1,17 @@
-import {useMemo} from "react"
-import Star, { StarType } from "./Star"
+import { useMemo } from "react";
+import Star, { StarType } from "./Star";
 
-const getRandomInt = (max:number, min = 0) => {
+const getRandomInt = (max: number, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const Stars = ({pages}:{pages:number}) => {
+const Stars = ({ pages }: { pages: number }) => {
   const pageStarCount = 40; //Number of Stars per page
 
   // calculate all of the stars
   const starGroups = useMemo(() => {
-    let ret: StarType[] = []
-    
+    const ret: StarType[] = [];
+
     for (let row = 0; row < pages; row++) {
       for (let column = 0; column < pageStarCount; column++) {
         // Give stars random speeds
@@ -20,29 +20,27 @@ const Stars = ({pages}:{pages:number}) => {
         // Star Vertical Fuzzyness
         // Stars get a whole number from the row number to start off
         // Then add a random number between .00 and 1
-        const fuzz = getRandomInt(100) * 0.01
-        let star:StarType = {
+        const fuzz = getRandomInt(100) * 0.01;
+        const star: StarType = {
           offset: row + fuzz,
           spacing: Math.floor(Math.random() * 100 + 1),
           opacity: getRandomInt(80, 10),
           size: getRandomInt(15, 6),
           speed: dotSpeed,
-        }
-        ret.push(star)        
+        };
+        ret.push(star);
       }
     }
     return ret;
-  }, [pages, pageStarCount])
+  }, [pages, pageStarCount]);
 
   return (
-      <>
-      {
-        starGroups.map((star) => {
-          return <Star {...star}/>
-        })
-      }
-      </>
-  )
-}
+    <>
+      {starGroups.map((star) => {
+        return <Star {...star} />;
+      })}
+    </>
+  );
+};
 
 export default Stars;

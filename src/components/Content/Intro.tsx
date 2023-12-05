@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 // import Icon from "../Common/Icon";
 
-const Content = styled("div")(({ theme }) => ({
+const Content = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

@@ -11,7 +11,7 @@ export type StarType = {
   spacing: number;
 };
 
-const StyledIcon = styled(Icon)(({ theme }) => ({}));
+const StyledIcon = styled(Icon)();
 
 const Star = ({ opacity, offset, size, speed, spacing }: StarType) => {
   return (

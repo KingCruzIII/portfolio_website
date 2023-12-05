@@ -1,66 +1,102 @@
-import { Typography } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Icon from "../Common/Icons/Icon";
 import Avatar from "@mui/material/Avatar";
+import {
+  SiJavascript,
+  SiReact,
+  SiJenkins,
+  SiDocker,
+  SiGit,
+  SiYarn,
+  SiLinux,
+  SiAnsible,
+  SiGooglecloud,
+  SiKubernetes,
+  SiLinkedin,
+  SiGithub,
+} from "react-icons/si";
 
-const StyledAvatar = styled(Avatar)(({ theme }) => ({
+import { FaDownload } from "react-icons/fa";
+
+const StyledAvatar = styled(Avatar)(() => ({
   width: 200,
   height: 200,
+  marginBottom: "1rem",
 }));
 
-const Wrapper = styled("div")(({ theme }) => ({
+const Wrapper = styled("div")(() => ({
   display: "flex",
   flexGrow: "1",
 }));
 
-const Picture = styled("div")(({ theme }) => ({
+const Picture = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  minWidth: "40%",
 }));
 
-const Info = styled("div")(({ theme }) => ({
+const Info = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   flexGrow: "1",
 }));
 
-const IconWrapper = styled(Icon)(({ theme }) => ({
-  // margin: "1rem",
-  // float: "right",
+const IconWrapper = styled("div")(({ theme }) => ({
+  color: theme.palette.primary.main,
+  fill: theme.palette.primary.main,
+  height: "56px",
+  width: "56px",
+  margin: "1rem",
+}));
+
+const SKillsWrapper = styled(Paper)(({ theme }) => ({
+  display: "flex",
+  maxWidth: "100%",
+  flexGrow: "1",
+  flexWrap: "wrap",
+  justifyContent: "center",
+}));
+
+const IconButton = styled("div")(({ theme }) => ({
+  color: theme.palette.primary.main,
+  fill: theme.palette.primary.main,
+  height: "56px",
+  width: "56px",
+  margin: "1rem",
+}));
+
+const StyledDownloadIcon = styled(FaDownload)(({ theme }) => ({
+  marginLeft: ".25rem",
 }));
 
 const About = () => {
-  // const date = new Date();
-  // const startDate = new Date("9-17-2018");
   return (
     <Wrapper>
       <Picture>
         <StyledAvatar src="https://avatars.githubusercontent.com/kingcruziii" />
-        <Typography fontSize="2rem" variant="body1">
-          Cruz Muniz III
-        </Typography>
+        <Button variant="contained">
+          {"Resume"} <StyledDownloadIcon />
+        </Button>
+        <div>
+          <IconButton as={SiLinkedin} />
+          <IconButton as={SiGithub} />
+        </div>
       </Picture>
       <Info>
-        <Typography fontSize="2rem" variant="body1">
-          Skills
-        </Typography>
-        <div>
-          <IconWrapper icon="js" prefix="fab" size="lg" />
-          <IconWrapper icon="react" prefix="fab" size="lg" />
-          <IconWrapper icon="jenkins" prefix="fab" size="lg" />
-          <IconWrapper icon="docker" prefix="fab" size="lg" />
-          <IconWrapper icon="git-alt" prefix="fab" size="lg" />
-          <IconWrapper icon="yarn" prefix="fab" size="lg" />
-          <IconWrapper icon="database" prefix="fas" size="lg" />
-          <IconWrapper icon="linux" prefix="fab" size="lg" />
-          <IconWrapper icon="ansible" size="lg" />
-          <IconWrapper icon="googlecloud" size="lg" />
-          <IconWrapper icon="ruby" size="lg" />
-          <IconWrapper icon="kube" size="lg" />
-          <IconWrapper icon="typescript" size="lg" />
-        </div>
+        <SKillsWrapper>
+          <IconWrapper as={SiJavascript} />
+          <IconWrapper as={SiReact} />
+          <IconWrapper as={SiGit} />
+          <IconWrapper as={SiLinux} />
+          <IconWrapper as={SiDocker} />
+          <IconWrapper as={SiYarn} />
+          <IconWrapper as={SiKubernetes} />
+          <IconWrapper as={SiAnsible} />
+          <IconWrapper as={SiJenkins} />
+          <IconWrapper as={SiGooglecloud} />
+        </SKillsWrapper>
       </Info>
     </Wrapper>
   );

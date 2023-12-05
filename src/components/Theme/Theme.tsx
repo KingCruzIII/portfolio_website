@@ -8,7 +8,7 @@ const theme = responsiveFontSizes(
     palette: {
       mode: "dark",
       primary: {
-        main: colors.grey[500],
+        main: colors.blue[600],
       },
       secondary: {
         main: colors.purple[600],
