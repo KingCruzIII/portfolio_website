@@ -110,7 +110,7 @@ const ContentContainer = () => {
             <Typography component="span" variant="h2">
               {"I'm "}
               <Typography color="primary.main" component="span" variant="h2">
-                Cruz Muniz,
+                Cruz Muñiz,
               </Typography>
             </Typography>
             <Typography component="span">
