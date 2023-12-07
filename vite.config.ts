@@ -4,5 +4,5 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [svgr(), react()],
-  base: "https://kingcruziii.github.io/portfolio_website/",
+  base: "http://www.cruzmuniziii.com/",
 });
