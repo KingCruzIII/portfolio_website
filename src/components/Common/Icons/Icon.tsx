@@ -8,6 +8,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import InternalSVG, { InternalSVGIconType } from "./InternalSVG";
+// import { HTMLAttributes } from "react";
 
 library.add(fas, fab);
 
@@ -20,6 +21,8 @@ export type IconType = {
   prefix?: IconPrefix;
   className?: string;
 };
+
+// type Thing = HTMLAttributes<SVGElement> & IconType & {someString: "string"}
 
 const getSize = ({ size, autoSize }: IconType) => {
   switch (size) {

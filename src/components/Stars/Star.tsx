@@ -16,7 +16,7 @@ const StyledIcon = styled(Icon)();
 const Star = ({ opacity, offset, size, speed, spacing }: StarType) => {
   return (
     <ParallaxLayer offset={offset} speed={speed}>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", zIndex: "0" }}>
         <StyledIcon
           icon="circle"
           autoSize
@@ -24,6 +24,7 @@ const Star = ({ opacity, offset, size, speed, spacing }: StarType) => {
           sx={{
             marginLeft: `${spacing}%`,
             opacity: `${opacity}%`,
+            zIndex: "0",
           }}
         />
       </div>
