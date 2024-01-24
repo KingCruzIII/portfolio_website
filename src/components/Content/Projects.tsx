@@ -126,7 +126,7 @@ const Projects = () => {
                 paddingBottom=".5rem"
                 variant="caption"
               >
-                React, TypeScript, Material UI
+                React, TypeScript, Material UI, Github Actions
               </Typography>
             </TechWrapper>
             <IconWrapper>
