@@ -21,10 +21,9 @@ const App = () => {
   return (
     <Theme>
       <>
+        <ContentContainer />
         <StyledParalax className="potato" pages={3}>
           <Stars pages={3} />
-
-          <ContentContainer />
         </StyledParalax>
       </>
     </Theme>

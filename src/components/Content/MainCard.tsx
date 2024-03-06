@@ -1,6 +1,6 @@
 import { Avatar, Button, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { ParallaxLayer } from "@react-spring/parallax";
+// import { ParallaxLayer } from "@react-spring/parallax";
 // import { FaEnvelope } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { SiLinkedin, SiGithub } from "react-icons/si";
@@ -56,8 +56,10 @@ const Intro = styled("div")(({ theme }) => ({
   flexGrow: "1",
   [theme.breakpoints.down("sm")]: {
     marginBottom: "1rem",
-    textAlign: "center",
   },
+  maxWidth: "500px",
+  padding: "10px",
+  textAlign: "center",
 }));
 
 const Links = styled("div")(() => ({
@@ -93,62 +95,74 @@ const MainCardWrapper = styled("div")(() => ({
 
 const MainCard = () => {
   return (
-    <ParallaxLayer offset={0} speed={1}>
-      <MainCardWrapper>
-        <StyledPaper>
-          <Content>
-            <AvatarWrapper>
-              <StyledAvatar src="https://avatars.githubusercontent.com/kingcruziii" />
-              <StyledDownloadButton
-                href="https://raw.githubusercontent.com/KingCruzIII/portfolio_website/main/Cruz_Muniz_Resume.pdf"
-                target="_blank"
-                variant="contained"
-              >
-                {"Resume"} <StyledDownloadIcon />
-              </StyledDownloadButton>
-            </AvatarWrapper>
-            <Intro>
-              <Typography variant="h2">Hi,</Typography>
-              <Typography component="span" variant="h2">
-                {"I'm "}
-                <Typography color="primary.main" component="span" variant="h2">
-                  Cruz Muñiz,
+    // <ParallaxLayer offset={0} speed={1}>
+    <MainCardWrapper>
+      <StyledPaper>
+        <Content>
+          <AvatarWrapper>
+            <StyledAvatar src="https://avatars.githubusercontent.com/kingcruziii" />
+            <StyledDownloadButton
+              href="https://raw.githubusercontent.com/KingCruzIII/portfolio_website/main/Cruz_Muniz_Resume.pdf"
+              target="_blank"
+              variant="contained"
+            >
+              {"Resume"} <StyledDownloadIcon />
+            </StyledDownloadButton>
+          </AvatarWrapper>
+          <Intro>
+            <Typography variant="h2">Hi,</Typography>
+            <Typography component="span" variant="h2">
+              {"I'm "}
+              <Typography color="primary.main" component="span" variant="h2">
+                Cruz Muñiz,
+              </Typography>
+            </Typography>
+            <Typography component="span">
+              {"A "}
+              <Typography component="span" color="primary.main">
+                {"Fullstack Developer "}
+                <Typography component="span" color="text.primary">
+                  {"who has a passion for "}
                 </Typography>
               </Typography>
               <Typography component="span">
-                {"A "}
                 <Typography component="span" color="primary.main">
-                  {"Fullstack Developer "}
-                  <Typography component="span" color="text.primary">
-                    {"who enjoys "}
-                    <Typography component="span" color="primary.main">
-                      {"Frontend Development"}
-                    </Typography>
-                  </Typography>
+                  {"DevOps, "}
+                </Typography>
+                <Typography component="span" color="primary.main">
+                  {"Frontend Development, "}
+                </Typography>
+                <Typography component="span">
+                  {"learning new things in the fast pace world of tech, "}
+                </Typography>
+                <Typography component="span">
+                  {"and don't get me started on my "}
+                </Typography>
+                <Typography component="span" color="primary.main">
+                  {"Homelab "}
+                </Typography>
+                <Typography component="span">{"and "}</Typography>
+                <Typography component="span" color="primary.main">
+                  {"Self Hosting."}
                 </Typography>
               </Typography>
-            </Intro>
-          </Content>
-          <Links>
-            <IconLink
-              target="_blank"
-              href="https://www.linkedin.com/in/cruz-muniz-iii"
-            >
-              <IconButton as={SiLinkedin} />
-            </IconLink>
-            <IconLink target="_blank" href="https://github.com/KingCruzIII">
-              <IconButton as={SiGithub} />
-            </IconLink>
-            {/* <IconLink
-    target="_blank"
-    // href="https://www.linkedin.com/in/cruz-muniz-iii"
-  >
-    <IconButton as={FaEnvelope} />
-  </IconLink> */}
-          </Links>
-        </StyledPaper>
-      </MainCardWrapper>
-    </ParallaxLayer>
+            </Typography>
+          </Intro>
+        </Content>
+        <Links>
+          <IconLink
+            target="_blank"
+            href="https://www.linkedin.com/in/cruz-muniz-iii"
+          >
+            <IconButton as={SiLinkedin} />
+          </IconLink>
+          <IconLink target="_blank" href="https://github.com/KingCruzIII">
+            <IconButton as={SiGithub} />
+          </IconLink>
+        </Links>
+      </StyledPaper>
+    </MainCardWrapper>
+    // </ParallaxLayer>
   );
 };
 
